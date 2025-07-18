@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9e9c7;
+  color: #000;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 20px;
+  background-color: transparent;
+}
+
+#menu nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 30px;
+  padding: 5px 40px;
+}
+
+#menu nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+#menu nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: red;
+  transition: width 0.3s ease-in-out;
+}
+
+#menu nav ul li a:hover::after {
+  width: 100%;
+}
+
+#menu nav ul li a:hover {
+  color: red;
+}
+
+.hero {
+  position: relative;
+  height: 500px;
+  background-image: url(imagenx/hello-7.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.hero-content {
+  position: absolute;
+  top: 300px;
+  z-index: 2;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hero-content .first-name {
+  font-size: 80px;
+  color: #000;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-overlay img {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transform-origin: bottom left;
+}
+
+.box {
+  padding: 40px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+.sobre {
+  background-color: #f4b400;
+  color: black;
+  margin-top: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 20px;
+}
+
+#skillz {
+  background-color: #FF6347;
+  color: black;
+  margin-top: 30px;
+  padding: 60px 20px;
+}
+
+#skillz h2 {
+  text-align: left;
+  font-size: 36px;
+  margin-bottom: 40px;
+  padding-left: 40px;
+}
+
+.habilidades-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.bloco-habilidades,
+.linguagens {
+  flex: 1 1 400px;
+  max-width: 500px;
+  background-color: #1a1a1a;
+  padding: 25px 30px;
+  border-radius: 18px;
+}
+
+.bloco-habilidades h3,
+.linguagens h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffd700;
+  text-align: left;
+}
+
+.barra-habilidade,
+.barra-linguagem {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.barra-habilidade span,
+.barra-linguagem span {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+  color: #ffd700;
+  text-align: left;
+}
+
+.barra {
+  background-color: #ddd;
+  width: 60%;
+  height: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.nivel {
+  height: 100%;
+  background-color: #00cc00;
+  border-radius: 10px 0 0 10px;
+}
+
+.avancado { width: 100%; }
+.html { width: 35%; }
+.css { width: 25%; }
+.js { width: 20%; }
+.node { width: 15%; }
+.react { width: 10%; }
+
+.blocos-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px 4px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.educacao, .experiencia {
+  flex: 1;
+  min-width: 500px;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.educacao,
+.experiencia {
+  background-color: green;
+  color: black;
+}
+
+.job {
+  background-color: #fff6dd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.job h3 {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.job p {
+  font-size: 20px;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.job ul {
+  padding-left: 20px;
+}
+
+.job.destaque {
+  background-color: #fffbd1;
+  border-left-color: #e63926;
+}
+
+.formacao {
+  background-color: #fff6dd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #00000020;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.formacao h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #1a1a1a;
+}
+
+.formacao p {
+  font-size: 20px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.contato {
+  background-color: #000;
+  color: white;
+  padding: 30px 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.contato form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contato input,
+.contato textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.contato button {
+  background-color: green;
+  color: white;
+  padding: 12px 30px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.contato button:hover {
+  background-color: #e63926;
+  color: black;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+}
+
+#rodape {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.rodape_conteudo {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.rodape_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rodape_icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.rodape_icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
